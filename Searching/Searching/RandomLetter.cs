@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Searching
 {
-    class RandomLetter
+    public class RandomLetter
     {
         static Random random = new Random();
 

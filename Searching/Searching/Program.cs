@@ -19,33 +19,27 @@ namespace Searching
 
             //Linear Search
             //Console.WriteLine("Write a word and see if it is in the List");
-            //string linearSearchItem = Console.ReadLine();
-            for (int i = 0; i < 10001; i++)
-            {
-                var searchItem = RandomLetter.GetLetter();
-                Regex regex = new Regex(searchItem, RegexOptions.IgnoreCase);
-                foreach (var word in lines)
-                {
-                    Match match = regex.Match(word);
-                    while (match.Success)
-                    {
-                        Console.WriteLine("'{0}' found at index {1}", match.Value, match.Index);
-                        match = match.NextMatch();
-                    }
-                }
-                Console.ReadLine();
-            }
+            //string searchItem = Console.ReadLine();
+            //LinearSearch search = new LinearSearch();
+            //search.SearchLinear(searchItem, lines);
+
+            //for (int i = 0; i < 10001; i++)
+            //{
+            //    var searchItem = RandomLetter.GetLetter();
+            //    search.SearchLinear(searchItem, lines);
+
+            //}
 
             //Binary Search
-            //Console.WriteLine("Write a word and see if it is in the List");
-            //string binarySearchItem = Console.ReadLine();
-            for (int i = 0; i < 10001; i++)
-            {
-                var searchItem = RandomLetter.GetLetter();
+            Console.WriteLine("Write a word and see if it is in the List");
+            string searchItem = Console.ReadLine();
+            //for (int i = 0; i < 10001; i++)
+            //{
+                //var searchItem = RandomLetter.GetLetter();
                 int index = lines.BinarySearch(searchItem);
 
                 Console.WriteLine("'{0}' found at index {1}", searchItem, index);
-            }
+            //}
 
 
 
